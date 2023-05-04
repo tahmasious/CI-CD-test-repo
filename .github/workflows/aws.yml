@@ -7,6 +7,14 @@ on:
 
 
 jobs:
+  test:
+    name : test
+    runs-on : ubuntu-latest
+    steps:
+    - name : see working directory
+      run : pwd && ls -la
+  
+  
   deploy:
     name: Deploy
     runs-on: self-hosted
@@ -15,5 +23,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     
-    - name : test code to run
-      run : ls -la && pwd
+    - name : prepare env
+      run : cd /home/ubuntu/cidi/CI-CD-test-repo
+    
+    - name : git pull
+      run : git pull
