@@ -19,10 +19,7 @@ jobs:
     name: Deploy
     runs-on: self-hosted
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    
+    steps:    
     - name : prepare env
       run : cd /home/ubuntu/cidi/CI-CD-test-repo
     
