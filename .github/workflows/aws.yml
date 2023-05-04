@@ -7,6 +7,14 @@ on:
 
 
 jobs:
+  test:
+    name : test
+    runs-on : ubuntu-latest
+    steps:
+    - name : see working directory
+      run : pwd && ls -la
+  
+  
   deploy:
     name: Deploy
     runs-on: self-hosted
@@ -17,3 +25,4 @@ jobs:
     
     - name : test code to run
       run : ls -la && pwd
+  
