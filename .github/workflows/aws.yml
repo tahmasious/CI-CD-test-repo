@@ -27,4 +27,7 @@ jobs:
       run : cd /home/ubuntu/cidi/CI-CD-test-repo
     
     - name : git pull
-      run : git pull
+      run : git status && git pull
+
+    - name : see env
+      run : ls -a && pwd
