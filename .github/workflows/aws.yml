@@ -23,6 +23,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     
-    - name : test code to run
-      run : ls -la && pwd
-  
+    - name : prepare env
+      run : cd /home/ubuntu/cidi/CI-CD-test-repo
+    
+    - name : git pull
+      run : git pull
